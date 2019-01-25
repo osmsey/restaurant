@@ -1,0 +1,72 @@
+
+
+
+
+.scroller {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    text-align: center;
+    line-height: 1;
+    
+}
+
+.dots {
+    width: 20%;
+    margin: auto;
+    
+    .btn {
+        cursor: pointer;
+        border-radius: 5px;
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        background: #bbb;
+
+        
+        &:hover {
+            background: #ccc;
+            border-color: #777;
+        }
+
+        
+    }
+}
+
+.btnNext {
+    width: 30%;
+    margin: auto;
+    
+    label {
+        border-radius: 20px;
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        background: #bbb;
+
+        
+        &:hover {
+            background: #ccc;
+            border-color: #777;
+        }  
+    }
+}
+
+.btnPrev {
+    width: 30%;
+    margin: auto;
+    label {
+        display: inline-block;
+        border-radius: 20px;
+        width: 40px;
+        height: 40px;
+        background: #bbb;
+
+        
+        &:hover {
+            background: #ccc;
+            border-color: #777;
+        }  
+    }
+}
+

@@ -1,0 +1,28 @@
+.left-part {
+    display: grid;
+    background: $white;
+    box-shadow: 8px 0 10px -8px $shadow;
+    grid-template-columns: 1fr;
+    grid-template-rows: 30% 70%;
+
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+        
+    img {
+            width: 80%;
+        }
+}
+
+
+.menu {
+    display: grid;
+    grid-gap: 5px;
+    padding: 10vh 0 20vh 30%;
+
+    
+    
+}
