@@ -1,29 +1,24 @@
 .left-part {
-    display: grid;
-    height: 90vh;
-    background: $white;
-    box-shadow: 8px 0 10px -8px $shadow;
-    grid-template-columns: 1fr;
-    grid-template-rows: 30% 70%;
-
+  display: grid;
+  background: $white;
+  height: 97vh;
+  box-shadow: 8px 0 10px -8px $shadow;
+  grid-template-columns: 1fr;
+  grid-template-rows: 30% 70%;
 }
 
 .logo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-        
-    img {
-            width: 80%;
-        }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    width: 80%;
+  }
 }
 
-
 .menu {
-    display: grid;
-    grid-gap: 5px;
-    padding: 10vh 0 20vh 30%;
-
-    
-    
+  display: grid;
+  grid-gap: 5px;
+  padding: 10vh 0 20vh 30%;
 }

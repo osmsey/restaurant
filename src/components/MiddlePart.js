@@ -1,51 +1,41 @@
-<div class="middle-part">
-                <div class="middle-menu">
-                        <a href="" class="button">BREAKFAST</a>
-                        <a href="" class="button">APPETIZER</a>
-                        <a href="" class="button">MAIN-COURSE</a>
-                        <a href="" class="button">DESSERT</a>
-                </div>
-                
-                <div class="dishes-wrap">
-                    <div class="dishes" id="br1">
-                        <img src="./Img/Breakfast/b1.jpg" alt="" class="dish-tile"/>
-                        <img src="./Img/Breakfast/b2.jpg" alt="" class="dish-tile"/>
-                        <img src="./Img/Breakfast/b3.jpg" alt="" class="dish-tile"/>
-                        <img src="./Img/Breakfast/b4.jpg" alt="" class="dish-tile"/>
-                    </div>
-                    <div class="dishes entrance-from-left" id="br2">
-                        <img src="./Img/Breakfast/b5.jpg" alt="" class="dish-tile"/>
-                        <img src="./Img/Breakfast/b6.jpg" alt="" class="dish-tile"/>
-                        <img src="./Img/Breakfast/b7.jpg" alt="" class="dish-tile"/>
-                        <img src="./Img/Breakfast/b8.jpg" alt="" class="dish-tile"/>
-                    </div>
-                    <div class="hidden" id="br3">
-                        <img src="./Img/Breakfast/b5.jpg" alt="" class="dish-tile"/>
-                        <img src="./Img/Breakfast/b6.jpg" alt="" class="dish-tile"/>
-                        <img src="./Img/Breakfast/b7.jpg" alt="" class="dish-tile"/>
-                        <img src="./Img/Breakfast/b8.jpg" alt="" class="dish-tile"/>
-                    </div>
-                    <div class="hidden" id="br4">
-                        <img src="./Img/Breakfast/b5.jpg" alt="" class="dish-tile"/>
-                        <img src="./Img/Breakfast/b6.jpg" alt="" class="dish-tile"/>
-                        <img src="./Img/Breakfast/b7.jpg" alt="" class="dish-tile"/>
-                        <img src="./Img/Breakfast/b8.jpg" alt="" class="dish-tile"/>
-                    </div>
-                </div>
+import React, { Component } from "react";
+import { Scroller } from "./Scroller";
+import { Dishes } from "./Dishes";
 
-                <div class="scroller">
-                   
-                    <div class="btnNext">
-                        <label for=""></label>
-                    </div>
-                    <div class="dots">
-                        <div class="btn" id="btn1"></div>
-                        <div class="btn" id="btn2"></div>
-                        <div class="btn" id="btn3"></div>
-                        <div class="btn" id="btn4"></div>
-                    </div>
-                    <div class="btnPrev">
-                        <label for="" class="btnPrev"></label>
-                    </div>
-                </div>
-            </div>
+class MiddlePart extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      active: "0"
+    };
+    this.active = this.active.bind(this);
+  }
+  active(event) {
+    this.setState({ active: event.target.id });
+  }
+  render() {
+    const secondary_menu = ["BREAKFAST", "APPETIZER", "MAIN", "DESSERT"];
+    let dishes_list = [
+      { id: "br1", images: ["b1", "b2", "b3", "b4"] },
+      { id: "br2", images: ["b5", "b6", "b7", "b8"] },
+      { id: "br1", images: ["b1", "b2", "b3", "b4"] }
+    ];
+    return (
+      <div className="middle-part">
+        <ul className="middle-menu">
+          {secondary_menu.map(item => (
+            <li key={item.toString()}>
+              <a href="" className="button">
+                {item}
+              </a>
+            </li>
+          ))}
+        </ul>
+        <Dishes {...dishes_list[this.state.active]} />
+        <Scroller activate={this.active} />
+      </div>
+    );
+  }
+}
+
+export default MiddlePart;
