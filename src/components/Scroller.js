@@ -1,10 +1,15 @@
 import React from "react";
 
+let nxt = ">";
+let prv = "<";
+
 export function Scroller(props) {
   return (
     <div class="scroller">
       <div class="btnNext">
-        <label for="" />
+        <label for="prev" onClick={props.prev}>
+          {prv}
+        </label>
       </div>
       <div class="dots">
         <div class="btn" id="0" onClick={props.activate} />
@@ -12,8 +17,10 @@ export function Scroller(props) {
         <div class="btn" id="2" onClick={props.activate} />
         <div class="btn" id="btn4" />
       </div>
-      <div class="btnPrev">
-        <label for="" class="btnNext" />
+      <div class="btnNext">
+        <label for="next" onClick={props.next}>
+          {nxt}
+        </label>
       </div>
     </div>
   );

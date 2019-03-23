@@ -1,10 +1,12 @@
-.left-part {
+.main-nav {
   display: grid;
   background: $white;
-  height: 97vh;
-  box-shadow: 8px 0 10px -8px $shadow;
+  box-shadow: 8px 0 10px -6px $gray;
   grid-template-columns: 1fr;
   grid-template-rows: 30% 70%;
+  z-index: 1;
+  width: 15%;
+  height: 100%;
 }
 
 .logo {
@@ -13,11 +15,11 @@
   align-items: center;
 
   img {
-    width: 80%;
+    width: 70%;
   }
 }
 
-.menu {
+.nav_buttons {
   display: grid;
   grid-gap: 5px;
   padding: 10vh 0 20vh 30%;

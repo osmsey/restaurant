@@ -1,29 +1,24 @@
 @import url("https://fonts.googleapis.com/css?family=Raleway:600");
 @import "variables";
-@import "left_part";
-@import "middle_part";
-@import "right_part";
+@import "main_nav";
+@import "menu_content";
 @import "scroller";
-
-body {
-  margin: 0;
-  padding: 0;
-}
+@import "about";
+@import "menu";
 
 .container {
   background: $gray;
-  justify-content: center;
-  align-items: center;
-  padding-top: 1%;
+  display: flex;
+  width: 1300px;
+  height: 700px;
+  box-shadow: -7px 10px 40px $shadow;
+
+  overflow: hidden;
 }
 
-.content {
-  display: grid;
-  grid-template-columns: 15% 50% 35%;
-  width: 80%;
-  box-shadow: -7px 10px 40px $shadow;
-  margin: auto;
-  overflow: hidden;
+button {
+  border: none;
+  background: none;
 }
 
 .button {
