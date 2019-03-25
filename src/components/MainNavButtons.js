@@ -1,6 +1,6 @@
 import React from "react";
 
-const Btns = ["About", "Menu", "Contact", "Chefs", "Media"];
+const Btns = ["About", "Menu", "Contact", "Chefs"];
 
 export function MainNavButtons(props) {
   return (
